@@ -118,7 +118,15 @@
     align-items: center;
     gap: 4px;
   }
-  nav button .ico { font-size: 1.3rem; line-height: 1; }
+  nav button svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
   nav button.activo { color: #d4af37; }
 </style>
 </head>
@@ -167,11 +175,26 @@
 </main>
 
 <nav>
-  <button class="activo" data-vista="portada"><span class="ico">&#9971;</span>Portada</button>
-  <button data-vista="madrid"><span class="ico">&#9813;</span>Real Madrid</button>
-  <button data-vista="analisis"><span class="ico">&#9776;</span>Análisis</button>
-  <button data-vista="multimedia"><span class="ico">&#9654;</span>Multimedia</button>
-  <button data-vista="mas"><span class="ico">&#8943;</span>Más</button>
+  <button class="activo" data-vista="portada">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+    Portada
+  </button>
+  <button data-vista="madrid">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+    Real Madrid
+  </button>
+  <button data-vista="analisis">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="M22 20H2"/></svg>
+    Análisis
+  </button>
+  <button data-vista="multimedia">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z"/></svg>
+    Multimedia
+  </button>
+  <button data-vista="mas">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>
+    Más
+  </button>
 </nav>
 
 <script>
