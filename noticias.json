@@ -1,5 +1,13 @@
 [
   {
+    "tipo": "rumor",
+    "seccion": "Real Madrid",
+    "titulo": "Rumor de prueba (borrar)",
+    "resumen": "Tarjeta de prueba para comprobar la etiqueta naranja de rumor. No es información real.",
+    "fecha": "22/11/2026",
+    "fuente": "Prueba interna"
+  },
+  {
     "tipo": "confirmada",
     "seccion": "LOBO BLANCO",
     "titulo": "LOBO BLANCO ya está en marcha",
@@ -8,11 +16,3 @@
     "fuente": "Redacción LOBO BLANCO"
   }
 ]
-  {
-    "tipo": "rumor",
-    "seccion": "Real Madrid",
-    "titulo": "Haaland se ofrece al Madrid.",
-    "resumen": "El jugador noruego contacta con Florentino Perez mediante su gran amigo Jude Bellingham y se ofrece para el próximo Mercado de invierno",
-    "fecha": "22/11/2026",
-    "fuente": "Lobo Blanco"
-  },
