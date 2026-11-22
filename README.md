@@ -1,2 +1,2 @@
-# lobo-blanco-
+# LOBO BLANCO
 Medio digital de fútbol y análisis deportivo
