@@ -1,0 +1,20 @@
+{
+  "name": "LOBO BLANCO",
+  "short_name": "LOBO BLANCO",
+  "description": "Medio digital deportivo: fútbol, análisis, actualidad y opinión.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
