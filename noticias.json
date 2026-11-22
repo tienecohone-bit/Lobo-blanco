@@ -1,13 +1,5 @@
 [
   {
-    "tipo": "rumor",
-    "seccion": "Real Madrid",
-    "titulo": "Rumor de prueba (borrar)",
-    "resumen": "Tarjeta de prueba para comprobar la etiqueta naranja de rumor. No es información real.",
-    "fecha": "22/11/2026",
-    "fuente": "Prueba interna"
-  },
-  {
     "tipo": "confirmada",
     "seccion": "LOBO BLANCO",
     "titulo": "LOBO BLANCO ya está en marcha",
