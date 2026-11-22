@@ -192,7 +192,8 @@
   <section id="madrid" class="vista">
     <h2>Real Madrid</h2>
     <p class="sub">Noticias, alineaciones, análisis tácticos, estadísticas y crónicas. Los fichajes y rumores irán separados de la información confirmada.</p>
-    <div class="aviso">En construcción. Todavía no hay contenido publicado.</div>
+    <div id="noticias-madrid"></div>
+    <div id="aviso-madrid" class="aviso">En construcción. Todavía no hay contenido publicado.</div>
   </section>
 
   <section id="analisis" class="vista">
@@ -281,6 +282,47 @@
     return el;
   }
 
+  function crearTarjeta(n) {
+    var t = crear('article', 'tarjeta');
+    if (n.imagen) {
+      var img = crear('img');
+      img.src = n.imagen;
+      img.alt = n.titulo || '';
+      img.loading = 'lazy';
+      t.appendChild(img);
+    }
+    var c = crear('div', 'cuerpo');
+    var et = crear('div', 'etiquetas');
+    var tipo = TIPOS[n.tipo] || TIPOS.confirmada;
+    et.appendChild(crear('span', 'etiqueta ' + tipo.clase, tipo.texto));
+    if (n.seccion) et.appendChild(crear('span', 'etiqueta', n.seccion));
+    c.appendChild(et);
+    c.appendChild(crear('h3', '', n.titulo || ''));
+    c.appendChild(crear('p', '', n.resumen || ''));
+
+    if (n.texto) {
+      var completo = crear('div', 'texto');
+      String(n.texto).split('\n').forEach(function (parrafo) {
+        if (parrafo.trim()) completo.appendChild(crear('p', '', parrafo));
+      });
+      c.appendChild(completo);
+      var leer = crear('div', 'leer', 'Leer más ▾');
+      c.appendChild(leer);
+      t.classList.add('conTexto');
+      t.addEventListener('click', function () {
+        var abierta = t.classList.toggle('abierta');
+        leer.textContent = abierta ? 'Cerrar ▴' : 'Leer más ▾';
+      });
+    }
+
+    var meta = [];
+    if (n.fecha) meta.push(n.fecha);
+    if (n.fuente) meta.push('Fuente: ' + n.fuente);
+    if (meta.length) c.appendChild(crear('div', 'meta', meta.join(' · ')));
+    t.appendChild(c);
+    return t;
+  }
+
   function pintarFiltros() {
     var cont = document.getElementById('filtros');
     cont.innerHTML = '';
@@ -313,46 +355,20 @@
       return;
     }
     aviso.style.display = 'none';
-    lista.forEach(function (n) {
-      var t = crear('article', 'tarjeta');
-      if (n.imagen) {
-        var img = crear('img');
-        img.src = n.imagen;
-        img.alt = n.titulo || '';
-        img.loading = 'lazy';
-        t.appendChild(img);
-      }
-      var c = crear('div', 'cuerpo');
-      var et = crear('div', 'etiquetas');
-      var tipo = TIPOS[n.tipo] || TIPOS.confirmada;
-      et.appendChild(crear('span', 'etiqueta ' + tipo.clase, tipo.texto));
-      if (n.seccion) et.appendChild(crear('span', 'etiqueta', n.seccion));
-      c.appendChild(et);
-      c.appendChild(crear('h3', '', n.titulo || ''));
-      c.appendChild(crear('p', '', n.resumen || ''));
+    lista.forEach(function (n) { cont.appendChild(crearTarjeta(n)); });
+  }
 
-      if (n.texto) {
-        var completo = crear('div', 'texto');
-        String(n.texto).split('\n').forEach(function (parrafo) {
-          if (parrafo.trim()) completo.appendChild(crear('p', '', parrafo));
-        });
-        c.appendChild(completo);
-        var leer = crear('div', 'leer', 'Leer más ▾');
-        c.appendChild(leer);
-        t.classList.add('conTexto');
-        t.addEventListener('click', function () {
-          var abierta = t.classList.toggle('abierta');
-          leer.textContent = abierta ? 'Cerrar ▴' : 'Leer más ▾';
-        });
-      }
-
-      var meta = [];
-      if (n.fecha) meta.push(n.fecha);
-      if (n.fuente) meta.push('Fuente: ' + n.fuente);
-      if (meta.length) c.appendChild(crear('div', 'meta', meta.join(' · ')));
-      t.appendChild(c);
-      cont.appendChild(t);
-    });
+  function pintarMadrid() {
+    var cont = document.getElementById('noticias-madrid');
+    var aviso = document.getElementById('aviso-madrid');
+    cont.innerHTML = '';
+    var lista = TODAS.filter(function (n) { return n.seccion === 'Real Madrid'; });
+    if (lista.length === 0) {
+      aviso.style.display = 'block';
+      return;
+    }
+    aviso.style.display = 'none';
+    lista.forEach(function (n) { cont.appendChild(crearTarjeta(n)); });
   }
 
   fetch('noticias.json', { cache: 'no-cache' })
@@ -361,6 +377,7 @@
       TODAS = Array.isArray(datos) ? datos : [];
       pintarFiltros();
       pintarNoticias();
+      pintarMadrid();
     })
     .catch(function () {
       var aviso = document.getElementById('aviso-portada');
