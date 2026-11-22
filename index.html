@@ -142,6 +142,16 @@
   .tarjeta .texto p { color: #ddd; margin-top: 10px; }
   .tarjeta.abierta .texto { display: block; }
   .tarjeta .leer { color: #d4af37; font-size: 0.85rem; margin-top: 12px; }
+  .tarjeta .enlace {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    border: 1px solid #d4af37;
+    border-radius: 16px;
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
   .tarjeta .meta { color: #777; font-size: 0.8rem; margin-top: 10px; }
   nav {
     display: flex;
@@ -206,7 +216,8 @@
   <section id="multimedia" class="vista">
     <h2>Multimedia</h2>
     <p class="sub">Vídeos, publicaciones de YouTube, contenido de TikTok, infografías e imágenes editoriales.</p>
-    <div class="aviso">En construcción. Todavía no hay contenido multimedia.</div>
+    <div id="noticias-multimedia"></div>
+    <div id="aviso-multimedia" class="aviso">En construcción. Todavía no hay contenido multimedia.</div>
   </section>
 
   <section id="mas" class="vista">
@@ -316,6 +327,15 @@
       });
     }
 
+    if (n.enlace && String(n.enlace).indexOf('https://') === 0) {
+      var a = crear('a', 'enlace', 'Ver contenido →');
+      a.href = n.enlace;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.addEventListener('click', function (e) { e.stopPropagation(); });
+      c.appendChild(a);
+    }
+
     var meta = [];
     if (n.fecha) meta.push(n.fecha);
     if (n.fuente) meta.push('Fuente: ' + n.fuente);
@@ -380,6 +400,7 @@
       pintarNoticias();
       pintarSeccion('Real Madrid', 'noticias-madrid', 'aviso-madrid');
       pintarSeccion('Análisis', 'noticias-analisis', 'aviso-analisis');
+      pintarSeccion('Multimedia', 'noticias-multimedia', 'aviso-multimedia');
     })
     .catch(function () {
       var aviso = document.getElementById('aviso-portada');
