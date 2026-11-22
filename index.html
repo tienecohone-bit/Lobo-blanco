@@ -7,7 +7,8 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
-<title>LOBO BLANCO</title><meta name="description" content="Medio digital de fútbol y análisis deportivo">
+<title>LOBO BLANCO</title>
+<meta name="description" content="Medio digital de fútbol y análisis deportivo">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LOBO BLANCO">
 <meta property="og:title" content="LOBO BLANCO">
@@ -56,6 +57,18 @@
     height: 3px;
     background: #d4af37;
     margin-top: 8px;
+  }
+  .portada-hero {
+    position: relative;
+    margin: -20px -16px 18px;
+    height: 230px;
+    background: #000 url('lobo-blanco-portada.jpg') center top / cover no-repeat;
+  }
+  .portada-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 45%, #000 100%);
   }
   .sub { color: #aaa; margin: 14px 0 20px; line-height: 1.5; }
   .aviso {
@@ -203,6 +216,7 @@
 
 <main>
   <section id="portada" class="vista activa">
+    <div class="portada-hero" role="img" aria-label="Mascota de LOBO BLANCO con la camiseta del Real Madrid"></div>
     <h2>Portada</h2>
     <p class="sub">Aquí aparecerán las noticias destacadas, los titulares de última hora y la sección de opinión.</p>
     <div id="filtros" class="filtros"></div>
