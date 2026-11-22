@@ -86,6 +86,29 @@
     text-decoration: none;
   }
   .lista a .ir { color: #d4af37; font-size: 0.85rem; }
+  .filtros {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-bottom: 16px;
+    padding-bottom: 4px;
+  }
+  .filtros button {
+    flex: 0 0 auto;
+    background: none;
+    border: 1px solid #444;
+    color: #aaa;
+    border-radius: 16px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .filtros button.activo {
+    border-color: #d4af37;
+    color: #000;
+    background: #d4af37;
+  }
   .tarjeta {
     background: #111;
     border: 1px solid #2a2a2a;
@@ -161,6 +184,7 @@
   <section id="portada" class="vista activa">
     <h2>Portada</h2>
     <p class="sub">Aquí aparecerán las noticias destacadas, los titulares de última hora y la sección de opinión.</p>
+    <div id="filtros" class="filtros"></div>
     <div id="noticias"></div>
     <div id="aviso-portada" class="aviso">Cargando noticias...</div>
   </section>
@@ -247,6 +271,9 @@
     opinion: { texto: 'Opinión', clase: 'opinion' }
   };
 
+  var TODAS = [];
+  var seccionActiva = 'Todas';
+
   function crear(tag, clase, texto) {
     var el = document.createElement(tag);
     if (clase) el.className = clase;
@@ -254,11 +281,33 @@
     return el;
   }
 
-  function pintarNoticias(lista) {
+  function pintarFiltros() {
+    var cont = document.getElementById('filtros');
+    cont.innerHTML = '';
+    var secciones = ['Todas'];
+    TODAS.forEach(function (n) {
+      if (n.seccion && secciones.indexOf(n.seccion) === -1) secciones.push(n.seccion);
+    });
+    if (secciones.length < 2) return;
+    secciones.forEach(function (s) {
+      var b = crear('button', s === seccionActiva ? 'activo' : '', s);
+      b.addEventListener('click', function () {
+        seccionActiva = s;
+        pintarFiltros();
+        pintarNoticias();
+      });
+      cont.appendChild(b);
+    });
+  }
+
+  function pintarNoticias() {
     var cont = document.getElementById('noticias');
     var aviso = document.getElementById('aviso-portada');
     cont.innerHTML = '';
-    if (!Array.isArray(lista) || lista.length === 0) {
+    var lista = TODAS.filter(function (n) {
+      return seccionActiva === 'Todas' || n.seccion === seccionActiva;
+    });
+    if (lista.length === 0) {
       aviso.textContent = 'En construcción. Todavía no hay noticias publicadas.';
       aviso.style.display = 'block';
       return;
@@ -308,7 +357,11 @@
 
   fetch('noticias.json', { cache: 'no-cache' })
     .then(function (r) { return r.json(); })
-    .then(pintarNoticias)
+    .then(function (datos) {
+      TODAS = Array.isArray(datos) ? datos : [];
+      pintarFiltros();
+      pintarNoticias();
+    })
     .catch(function () {
       var aviso = document.getElementById('aviso-portada');
       aviso.textContent = 'No se han podido cargar las noticias. Comprueba tu conexión.';
