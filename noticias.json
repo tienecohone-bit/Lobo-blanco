@@ -7,13 +7,5 @@
     "texto": "Nace la app de LOBO BLANCO, un medio digital deportivo independiente.\nEn ella encontrarás fútbol, análisis, actualidad y opinión. Pronto habrá más contenido.",
     "fecha": "22/11/2026",
     "fuente": "Redacción LOBO BLANCO"
-  },
-  {
-    "tipo": "opinion",
-    "seccion": "Análisis",
-    "titulo": "PRUEBA: noticia para probar la pestaña Análisis",
-    "resumen": "Esta entrada es solo una prueba técnica y se borrará.",
-    "fecha": "22/11/2026",
-    "fuente": "Redacción LOBO BLANCO"
   }
 ]
