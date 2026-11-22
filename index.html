@@ -199,7 +199,8 @@
   <section id="analisis" class="vista">
     <h2>Análisis</h2>
     <p class="sub">Previas y posteriores de los partidos, rendimiento individual, comparativas y jugadores determinantes.</p>
-    <div class="aviso">En construcción. Todavía no hay análisis publicados.</div>
+    <div id="noticias-analisis"></div>
+    <div id="aviso-analisis" class="aviso">En construcción. Todavía no hay análisis publicados.</div>
   </section>
 
   <section id="multimedia" class="vista">
@@ -358,11 +359,11 @@
     lista.forEach(function (n) { cont.appendChild(crearTarjeta(n)); });
   }
 
-  function pintarMadrid() {
-    var cont = document.getElementById('noticias-madrid');
-    var aviso = document.getElementById('aviso-madrid');
+  function pintarSeccion(nombre, idLista, idAviso) {
+    var cont = document.getElementById(idLista);
+    var aviso = document.getElementById(idAviso);
     cont.innerHTML = '';
-    var lista = TODAS.filter(function (n) { return n.seccion === 'Real Madrid'; });
+    var lista = TODAS.filter(function (n) { return n.seccion === nombre; });
     if (lista.length === 0) {
       aviso.style.display = 'block';
       return;
@@ -377,7 +378,8 @@
       TODAS = Array.isArray(datos) ? datos : [];
       pintarFiltros();
       pintarNoticias();
-      pintarMadrid();
+      pintarSeccion('Real Madrid', 'noticias-madrid', 'aviso-madrid');
+      pintarSeccion('Análisis', 'noticias-analisis', 'aviso-analisis');
     })
     .catch(function () {
       var aviso = document.getElementById('aviso-portada');
