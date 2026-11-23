@@ -105,11 +105,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
     width: 100%;
     color: #fff;
     text-decoration: none;
   }
-  .lista a .ir { color: #d4af37; font-size: 0.85rem; }
+  .lista a .ir { color: #d4af37; font-size: 0.85rem; white-space: nowrap; }
+  .lista a .info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+  .lista a .desc { color: #888; font-size: 0.8rem; }
+  .cat {
+    margin: 18px 0 0;
+    color: #aaa;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
   .filtros {
     display: flex;
     gap: 8px;
@@ -264,6 +274,9 @@
       <li>YouTube <small>Próximamente</small></li>
       <li>Instagram <small>Próximamente</small></li>
     </ul>
+
+    <h3 class="bloque" id="bloque-enlaces" style="display:none">Enlaces de interés</h3>
+    <div id="enlaces-interes"></div>
   </section>
 </main>
 
@@ -417,6 +430,48 @@
     lista.forEach(function (n) { cont.appendChild(crearTarjeta(n)); });
   }
 
+  function pintarEnlaces(datos) {
+    var cont = document.getElementById('enlaces-interes');
+    var titulo = document.getElementById('bloque-enlaces');
+    cont.innerHTML = '';
+    var validos = (Array.isArray(datos) ? datos : []).filter(function (e) {
+      return e && e.nombre && e.enlace && String(e.enlace).indexOf('https://') === 0;
+    });
+    if (validos.length === 0) {
+      titulo.style.display = 'none';
+      return;
+    }
+    titulo.style.display = 'block';
+
+    var categorias = [];
+    validos.forEach(function (e) {
+      var cat = e.categoria || 'Otros';
+      if (categorias.indexOf(cat) === -1) categorias.push(cat);
+    });
+
+    categorias.forEach(function (cat) {
+      cont.appendChild(crear('div', 'cat', cat));
+      var ul = crear('ul', 'lista');
+      validos.filter(function (e) { return (e.categoria || 'Otros') === cat; })
+        .forEach(function (e) {
+          var li = crear('li');
+          var a = crear('a');
+          a.href = e.enlace;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          var info = crear('span', 'info');
+          var nombre = e.nombre + (e.plataforma ? ' · ' + e.plataforma : '');
+          info.appendChild(crear('span', '', nombre));
+          if (e.descripcion) info.appendChild(crear('span', 'desc', e.descripcion));
+          a.appendChild(info);
+          a.appendChild(crear('span', 'ir', 'Abrir →'));
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+      cont.appendChild(ul);
+    });
+  }
+
   fetch('noticias.json', { cache: 'no-cache' })
     .then(function (r) { return r.json(); })
     .then(function (datos) {
@@ -431,6 +486,11 @@
       var aviso = document.getElementById('aviso-portada');
       aviso.textContent = 'No se han podido cargar las noticias. Comprueba tu conexión.';
     });
+
+  fetch('enlaces.json', { cache: 'no-cache' })
+    .then(function (r) { return r.json(); })
+    .then(pintarEnlaces)
+    .catch(function () {});
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
