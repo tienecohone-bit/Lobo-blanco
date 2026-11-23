@@ -1,0 +1,129 @@
+[
+  {
+    "fecha": "2026-11-24",
+    "hora": "21:00",
+    "tipo": "partido",
+    "competicion": "Champions League",
+    "titulo": "Real Madrid vs PSV Eindhoven",
+    "sede": "En casa"
+  },
+  {
+    "fecha": "2026-11-28",
+    "hora": "21:00",
+    "tipo": "partido",
+    "competicion": "LaLiga",
+    "titulo": "Real Madrid vs Deportivo Alavés",
+    "sede": "En casa"
+  },
+  {
+    "fecha": "2026-12-02",
+    "hora": "19:00",
+    "tipo": "partido",
+    "competicion": "LaLiga",
+    "titulo": "Real Sociedad vs Real Madrid",
+    "sede": "Fuera"
+  },
+  {
+    "fecha": "2026-12-06",
+    "hora": "16:15",
+    "tipo": "partido",
+    "competicion": "LaLiga",
+    "titulo": "Athletic Club vs Real Madrid",
+    "sede": "Fuera"
+  },
+  {
+    "fecha": "2026-12-09",
+    "hora": "21:00",
+    "tipo": "partido",
+    "competicion": "Champions League",
+    "titulo": "Arsenal vs Real Madrid",
+    "sede": "Fuera"
+  },
+  {
+    "fecha": "2026-12-13",
+    "hora": "20:00",
+    "tipo": "partido",
+    "competicion": "LaLiga",
+    "titulo": "Real Madrid vs Osasuna",
+    "sede": "En casa"
+  },
+  {
+    "fecha": "2026-12-16",
+    "tipo": "fecha",
+    "competicion": "Copa del Rey",
+    "titulo": "Debut del Real Madrid en la Copa del Rey (dieciseisavos)",
+    "detalle": "El Madrid no juega las primeras rondas por disputar la Supercopa. Fecha de la ronda según la prensa: por confirmar el día y la hora exactos del partido."
+  },
+  {
+    "fecha": "2026-12-20",
+    "hora": "20:00",
+    "tipo": "partido",
+    "competicion": "LaLiga",
+    "titulo": "Deportivo de La Coruña vs Real Madrid",
+    "sede": "Fuera"
+  },
+  {
+    "fecha": "2027-01-03",
+    "hora": "20:00",
+    "tipo": "partido",
+    "competicion": "LaLiga",
+    "titulo": "Real Madrid vs Getafe",
+    "sede": "En casa"
+  },
+  {
+    "fecha": "2027-01-10",
+    "hora": "20:00",
+    "tipo": "partido",
+    "competicion": "LaLiga",
+    "titulo": "Real Madrid vs Levante",
+    "sede": "En casa"
+  },
+  {
+    "fecha": "2027-01-17",
+    "hora": "20:00",
+    "tipo": "partido",
+    "competicion": "LaLiga",
+    "titulo": "Málaga vs Real Madrid",
+    "sede": "Fuera"
+  },
+  {
+    "fecha": "2027-01-19",
+    "hora": "21:00",
+    "tipo": "partido",
+    "competicion": "Champions League",
+    "titulo": "Real Madrid vs LASK Linz",
+    "sede": "En casa"
+  },
+  {
+    "fecha": "2027-01-24",
+    "hora": "20:00",
+    "tipo": "partido",
+    "competicion": "LaLiga",
+    "titulo": "Real Madrid vs Real Betis",
+    "sede": "En casa"
+  },
+  {
+    "fecha": "2027-01-27",
+    "hora": "21:00",
+    "tipo": "partido",
+    "competicion": "Champions League",
+    "titulo": "Shakhtar Donetsk vs Real Madrid",
+    "sede": "Fuera"
+  },
+  {
+    "fecha": "2027-01-31",
+    "hora": "20:00",
+    "tipo": "partido",
+    "competicion": "LaLiga",
+    "titulo": "Rayo Vallecano vs Real Madrid",
+    "sede": "Fuera"
+  },
+  {
+    "fecha": "2027-02-02",
+    "tipo": "fecha",
+    "competicion": "Supercopa",
+    "titulo": "Supercopa de España en Estambul (2-7 de febrero)",
+    "lugar": "Estambul, Turquía",
+    "detalle": "Semifinal Real Madrid vs Real Sociedad el 2 o el 3 de febrero según las fuentes: por confirmar el día y la hora."
+  }
+]
