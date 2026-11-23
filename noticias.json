@@ -6,18 +6,16 @@
     "resumen": "Nace la app del medio digital deportivo independiente: fútbol, análisis, actualidad y opinión. Pronto, más contenido.",
     "texto": "Nace la app de LOBO BLANCO, un medio digital deportivo independiente.\nEn ella encontrarás fútbol, análisis, actualidad y opinión. Pronto habrá más contenido.",
     "fecha": "22/11/2026",
-    "fuente": "Redacción LOBO BLANCO",
-    "fija": true
+    "fuente": "Redacción LOBO BLANCO"
   },
   {
     "tipo": "opinion",
     "seccion": "Multimedia",
     "titulo": "El Vini prime aconseja al Vini actual",
-    "resumen": "Nuevo vídeo en el TikTok de LOBO BLANCO: el Vini prime aconseja al Vini actual.",
-    "enlace": "https://vm.tiktok.com/ZGdX31VsL/",
+    "resumen": "Nuevo vídeo en el TikTok de LOBO BLANCO.",
+    "enlace": "https://vm.tiktok.com/ZGdX31VSL/",
     "fecha": "18/11/2026",
-    "fuente": "TikTok @lobo1610",
-    "fija": true
+    "fuente": "TikTok @lobo1610"
   },
   {
     "tipo": "opinion",
@@ -27,5 +25,50 @@
     "texto": "Nueve victorias seguidas y, aun así, la sensación de que el Madrid camina sobre el alambre. Los resultados maquillan demasiado: el equipo ha encajado en seis de esas nueve victorias, ganó 4-3 en Roma y 3-2 en Atenas, y ante el Celta volvió a empezar dormido: gol de Pablo Durán en el minuto 6.\nUn equipo con esta plantilla no puede permitirse regalar un tiempo entero: el Celta mantuvo su ventaja hasta el descanso. Mbappé, además, falló un penalti. Las remontadas son bonitas, pero repetirlas cada semana no es un plan, es una apuesta. Bellingham igualó en la segunda parte y Espí, desde el banquillo, marcó el 2-1 a cinco minutos del final.\nMientras tanto, el Barça manda con tres puntos de ventaja, y no conviene olvidar que el Madrid ya perdió en septiembre ante el Betis (0-1) y el Atlético (1-2). Dos derrotas que pesan en una liga que se decide por detalles.\nLo que viene, con PSV, Alavés, Real Sociedad, Athletic y la visita al Arsenal, no admite más excusas. No toca aplaudir la racha: toca exigir un Madrid que salga a ganar desde el minuto uno, que defienda con seriedad y que no necesite que el banquillo lo despierte.",
     "fecha": "23/11/2026",
     "fuente": "Redacción LOBO BLANCO"
+  },
+  {
+    "tipo": "rumor",
+    "seccion": "Real Madrid",
+    "titulo": "Endrick: lesión muscular e información sobre una oferta del Milan",
+    "resumen": "El Real Madrid confirma una lesión muscular en el abductor izquierdo de Endrick mientras la Cadena SER informa de una posible oferta del Milan.",
+    "texto": "El Real Madrid ha confirmado una lesión muscular en el abductor izquierdo de Endrick.\nDe forma paralela, según la Cadena SER, el Milan prepararía o habría planteado una oferta cercana a los 70 millones de euros para enero, una información atribuida a este medio y no un traspaso cerrado.\n¿Venderlo sería un error histórico o una oportunidad irrechazable? El futuro del futbolista queda pendiente de su evolución física y del mercado.",
+    "fecha": "23/11/2026",
+    "fuente": "Real Madrid y Cadena SER"
+  },
+  {
+    "tipo": "confirmada",
+    "seccion": "Real Madrid",
+    "titulo": "Mourinho responde a Comesaña y menciona el caso Negreira",
+    "resumen": "Mourinho replica a Santi Comesaña sobre los arbitrajes y rechaza equiparar al Real Madrid con el Barcelona por el caso Negreira.",
+    "texto": "Mourinho respondió a las declaraciones de Santi Comesaña sobre los arbitrajes con la frase: «Tiene amnesia».\nEl técnico portugués rechazó que se equipare al Real Madrid con el Barcelona en relación con el caso Negreira y lanzó un dardo directo sobre este asunto.\nMourinho no esquiva ninguna batalla. ¿Hacía falta esta respuesta?",
+    "fecha": "23/11/2026",
+    "fuente": "AS, Cadena SER y Europa Press"
+  },
+  {
+    "tipo": "confirmada",
+    "seccion": "Real Madrid",
+    "titulo": "Mourinho confirma a Vinicius ante el PSV y le quita presión",
+    "resumen": "Mourinho asegura que Vinicius volverá a su potencial máximo, confirma su titularidad ante el PSV y le resta presión individual.",
+    "texto": "Mourinho lanzó un mensaje a Vinicius al afirmar: «Volverá a su potencial máximo».\nEl entrenador confirmó que será titular ante el PSV, defendió su potencial y su aportación colectiva, y le quitó presión señalando que no necesita ser el hombre del partido.\nAhora le toca responder sobre el césped. ¿Vuelve el mejor Vini?",
+    "fecha": "23/11/2026",
+    "fuente": "Rueda de prensa oficial del Real Madrid"
+  },
+  {
+    "tipo": "confirmada",
+    "seccion": "Real Madrid",
+    "titulo": "El Real Madrid recibe al PSV con 12 de 12 y el objetivo de evitar el playoff",
+    "resumen": "Con 12 puntos de 12 en Champions, el Real Madrid mide al PSV con la meta de ganar y evitar el playoff, según Mourinho.",
+    "texto": "El Real Madrid no quiere hacer cuentas con 12 de 12 en Champions. El PSV visita el Bernabéu y Mourinho tiene claro el objetivo: ganar y evitar el playoff.\nEl técnico advirtió además de que el PSV es mejor equipo de lo que refleja su puntuación. En Europa no hay margen para dormirse. ¿Nueva noche grande del Madrid?",
+    "fecha": "23/11/2026",
+    "fuente": "Real Madrid y rueda de prensa de Mourinho"
+  },
+  {
+    "tipo": "confirmada",
+    "seccion": "Real Madrid",
+    "titulo": "Courtois afirma querer acabar su carrera en el Real Madrid",
+    "resumen": "Tras renovar un año más, Courtois expresa su felicidad y su deseo de retirarse en el Real Madrid.",
+    "texto": "Courtois lo tiene claro: quiere acabar su carrera en el Real Madrid.\nEl guardameta belga declaró estar muy feliz tras renovar un año más y no esconde dónde quiere escribir el último capítulo de su trayectoria.\nLiderazgo, seguridad y compromiso. ¿Es ya una leyenda blanca?",
+    "fecha": "23/11/2026",
+    "fuente": "Real Madrid (rueda de prensa del 23 de noviembre)"
   }
 ]
