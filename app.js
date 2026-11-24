@@ -24,6 +24,25 @@ var compActiva = 'Todas';
 var DIAS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
 var MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
+var DIAS_VIGENCIA = 5;
+
+// Una noticia se oculta cuando han pasado DIAS_VIGENCIA dias desde su fecha.
+// "fija": true la mantiene siempre; "dias": N cambia su duracion.
+// Sin fecha valida (dd/mm/aaaa) nunca caduca.
+function vigente(n) {
+  if (!n || n.fija === true) return true;
+  var m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(String(n.fecha || ''));
+  if (!m) return true;
+  var f = new Date(+m[3], +m[2] - 1, +m[1]);
+  if (isNaN(f.getTime())) return true;
+  var dias = parseInt(n.dias, 10);
+  if (!(dias > 0)) dias = DIAS_VIGENCIA;
+  var hoy = new Date();
+  hoy = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
+  var edad = Math.round((hoy - f) / 86400000);
+  return edad < dias;
+}
+
 function crear(tag, clase, texto) {
   var el = document.createElement(tag);
   if (clase) el.className = clase;
@@ -325,7 +344,7 @@ function pintarCalendario() {
 fetch('noticias.json', { cache: 'no-cache' })
   .then(function (r) { return r.json(); })
   .then(function (datos) {
-    TODAS = Array.isArray(datos) ? datos : [];
+    TODAS = (Array.isArray(datos) ? datos : []).filter(vigente);
     pintarFiltros();
     pintarNoticias();
     pintarSeccion('Real Madrid', 'noticias-madrid', 'aviso-madrid');
