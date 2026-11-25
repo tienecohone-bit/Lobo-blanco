@@ -120,6 +120,22 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+  .privacidad summary {
+    cursor: pointer;
+    padding: 16px 4px;
+    border-bottom: 1px solid #222;
+    font-size: 1.05rem;
+    color: #fff;
+  }
+  .privacidad[open] summary { color: #d4af37; }
+  .privacidad p {
+    color: #bbb;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 12px 4px 0;
+  }
+  .privacidad strong { color: #ddd; }
+  .privacidad .fecha { color: #777; font-size: 0.78rem; }
   .filtros {
     display: flex;
     gap: 8px;
@@ -351,6 +367,18 @@
 
     <h3 class="bloque" id="bloque-enlaces" style="display:none">Enlaces de interés</h3>
     <div id="enlaces-interes"></div>
+
+    <h3 class="bloque">Privacidad</h3>
+    <details class="privacidad">
+      <summary>Aviso de privacidad</summary>
+      <p class="fecha">Última actualización: 25/11/2026.</p>
+      <p><strong>Qué datos tratamos.</strong> LOBO BLANCO no pide registro, nombre, correo ni teléfono. Solo si puntúas una noticia, guardamos la noticia, tu puntuación (de 1 a 5) y un identificador anónimo que crea tu navegador.</p>
+      <p><strong>Para qué.</strong> Para calcular la media de cada noticia y permitir un voto por dispositivo. No los usamos para publicidad ni para elaborar perfiles.</p>
+      <p><strong>Quién presta el servicio.</strong> Las valoraciones se guardan con Google Firebase, en servidores de Google ubicados en Europa. Como en cualquier servicio web, Google puede tratar datos técnicos (por ejemplo, la dirección IP) para prestarlo.</p>
+      <p><strong>En tu dispositivo.</strong> Tu navegador guarda tu identificador anónimo y tus votos para mostrártelos. Puedes borrarlos en cualquier momento eliminando los datos del sitio en los ajustes de tu navegador; los votos ya enviados permanecen de forma anónima.</p>
+      <p><strong>Enlaces externos.</strong> Al abrir enlaces a X, TikTok, YouTube o Google Calendar, esas plataformas aplican sus propias políticas.</p>
+      <p><strong>Contacto.</strong> Para cualquier duda o solicitud sobre tus datos, escríbenos por X: @LoboBlancoXL. Como los votos son anónimos, es posible que no podamos identificar los tuyos. Cuando haya publicidad u otros servicios, actualizaremos este aviso.</p>
+    </details>
   </section>
 </main>
 
