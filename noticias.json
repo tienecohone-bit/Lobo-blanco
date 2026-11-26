@@ -1,23 +1,30 @@
 [
   {
-    "tipo": "confirmada",
-    "seccion": "LOBO BLANCO",
-    "titulo": "LOBO BLANCO ya está en marcha",
-    "resumen": "Nace la app del medio digital deportivo independiente: fútbol, análisis, actualidad y opinión. Pronto, más contenido.",
-    "texto": "Nace la app de LOBO BLANCO, un medio digital deportivo independiente.\nEn ella encontrarás fútbol, análisis, actualidad y opinión. Pronto habrá más contenido.",
-    "fecha": "22/11/2026",
-    "fuente": "Redacción LOBO BLANCO",
-    "fija": true
+    "tipo": "opinion",
+    "seccion": "Real Madrid",
+    "titulo": "Manolo Romero pide un central y un centrocampista en enero",
+    "resumen": "El exojeador madridista cree que la primera parte ante el PSV fue una señal de alarma pese a la goleada.",
+    "texto": "Manolo Romero, exojeador del Real Madrid, pidió en El Bar de la Cadena SER que el club fiche un central y un centrocampista en el mercado de invierno.\nSegún Romero, la goleada al PSV no debe ocultar lo ocurrido en la primera parte, cuando el Madrid fue por detrás en el marcador y mostró desorden en la alineación, hasta que Mourinho corrigió el rumbo en el descanso.\nEs una opinión identificada y atribuida, no una postura oficial del club.",
+    "fecha": "26/11/2026",
+    "fuente": "Goal, citando a Cadena SER (El Bar)"
   },
   {
     "tipo": "opinion",
-    "seccion": "Multimedia",
-    "titulo": "El Vini prime aconseja al Vini actual",
-    "resumen": "Nuevo vídeo en el TikTok de LOBO BLANCO: el Vini prime aconseja al Vini actual.",
-    "enlace": "https://vm.tiktok.com/ZGdX31VsL/",
-    "fecha": "18/11/2026",
-    "fuente": "TikTok @lobo1610",
-    "fija": true
+    "seccion": "Análisis",
+    "titulo": "Vinícius recupera la izquierda y Diomande pasa a la derecha",
+    "resumen": "Tras su partido ante el PSV, el debate está en cómo Mourinho encaja a los dos extremos.",
+    "texto": "Ante el Celta, Mourinho eligió a Diomande en la izquierda y Vinícius salió desde el banquillo. Contra el PSV, en cambio, dio la banda izquierda al brasileño desde el inicio y movió a Diomande a la derecha.\nVinícius respondió con dos balones al palo y el gol que cerró la goleada.\nSegún Goal, Mourinho tiene previsto rotarlos en la izquierda, con partidos en los que jueguen juntos.\nLa pregunta que queda abierta: ¿debe Mourinho apostar por el brasileño o encontrar un sistema que permita juntar a los dos?",
+    "fecha": "26/11/2026",
+    "fuente": "Telemadrid y Goal"
+  },
+  {
+    "tipo": "confirmada",
+    "seccion": "Real Madrid",
+    "titulo": "El Real Madrid conquista el liderato en solitario de la Champions",
+    "resumen": "El conjunto blanco lidera la Champions 2026/27 con 15 puntos de 15 posibles tras golear al PSV (5-1) y aprovechar el empate del PSG.",
+    "texto": "El Real Madrid ha terminado la quinta jornada de la fase de liga de la Champions League 2026/27 como líder en solitario. La contundente victoria por 5-1 frente al PSV Eindhoven en el Santiago Bernabéu permitió al equipo blanco completar un pleno de cinco triunfos y alcanzar los 15 puntos.\nEl conjunto madridista aventaja ahora en dos puntos al Paris Saint-Germain, segundo clasificado con 13. El empate del equipo francés frente a la Roma (2-2) resultó decisivo para que los blancos se distanciaran en lo más alto de la clasificación.\nEl Como, el Barcelona, el Liverpool y el Real Betis comparten los siguientes puestos destacados, todos ellos con 12 puntos. El Real Madrid presenta, además, una diferencia de goles de +10, con 18 tantos a favor y ocho en contra.\nCon tres jornadas todavía por disputarse, el equipo blanco tiene en su mano consolidar una posición privilegiada para afrontar las eliminatorias. Los ocho primeros clasificados al término de esta fase accederán directamente a los octavos de final, por lo que mantener el liderato será un objetivo importante en el camino hacia el título.\nEl balance hasta ahora es incontestable: cinco partidos, cinco victorias y pleno de puntos. El Real Madrid vuelve a situarse en lo más alto de Europa en una competición en la que cada jornada empieza a perfilar a los principales aspirantes.",
+    "fecha": "26/11/2026",
+    "fuente": "Clasificación y resultados de la Champions League (26/11/2026)"
   },
   {
     "tipo": "confirmada",
@@ -28,6 +35,15 @@
     "fecha": "25/11/2026",
     "fuente": "TikTok @lobo1610",
     "fija": true
+  },
+  {
+    "tipo": "confirmada",
+    "seccion": "Real Madrid",
+    "titulo": "Mourinho sitúa a Bellingham como el mejor centrocampista del mundo",
+    "resumen": "Tras el 5-1 al PSV, el técnico elogió a Jude, que cambió el partido en la segunda parte.",
+    "texto": "Tras la victoria del Real Madrid por 5-1 ante el PSV en la quinta jornada de la Champions, Mourinho elogió a Jude Bellingham en rueda de prensa y lo consideró «el mejor jugador del centro del campo del mundo».\nEl técnico destacó que Bellingham cambió la dirección del partido, aunque aclaró que no lo hizo solo, y subrayó que puede jugar de diez, de ocho o con dos pivotes.\nMourinho restó mérito propio: dijo que el responsable de lo que es Jude es el propio Jude y sus compañeros. También calificó de escándalo que no estuviera entre los diez primeros del Balón de Oro. El inglés, por su parte, atribuyó su mejoría al propio Mourinho.",
+    "fecha": "24/11/2026",
+    "fuente": "Rueda de prensa de Mourinho tras el Real Madrid-PSV (realmadrid.com)"
   },
   {
     "tipo": "opinion",
@@ -85,11 +101,22 @@
   },
   {
     "tipo": "confirmada",
-    "seccion": "Real Madrid",
-    "titulo": "El Real Madrid conquista el liderato en solitario de la Champions",
-    "resumen": "El conjunto blanco lidera la Champions 2026/27 con 15 puntos de 15 posibles tras golear al PSV (5-1) y aprovechar el empate del PSG.",
-    "texto": "El Real Madrid ha terminado la quinta jornada de la fase de liga de la Champions League 2026/27 como líder en solitario. La contundente victoria por 5-1 frente al PSV Eindhoven en el Santiago Bernabéu permitió al equipo blanco completar un pleno de cinco triunfos y alcanzar los 15 puntos.\nEl conjunto madridista aventaja ahora en dos puntos al Paris Saint-Germain, segundo clasificado con 13. El empate del equipo francés frente a la Roma (2-2) resultó decisivo para que los blancos se distanciaran en lo más alto de la clasificación.\nEl Como, el Barcelona, el Liverpool y el Real Betis comparten los siguientes puestos destacados, todos ellos con 12 puntos. El Real Madrid presenta, además, una diferencia de goles de +10, con 18 tantos a favor y ocho en contra.\nCon tres jornadas todavía por disputarse, el equipo blanco tiene en su mano consolidar una posición privilegiada para afrontar las eliminatorias. Los ocho primeros clasificados al término de esta fase accederán directamente a los octavos de final, por lo que mantener el liderato será un objetivo importante en el camino hacia el título.\nEl balance hasta ahora es incontestable: cinco partidos, cinco victorias y pleno de puntos. El Real Madrid vuelve a situarse en lo más alto de Europa en una competición en la que cada jornada empieza a perfilar a los principales aspirantes.",
-    "fecha": "26/11/2026",
-    "fuente": "Clasificación y resultados de la Champions League (26/11/2026)"
+    "seccion": "LOBO BLANCO",
+    "titulo": "LOBO BLANCO ya está en marcha",
+    "resumen": "Nace la app del medio digital deportivo independiente: fútbol, análisis, actualidad y opinión. Pronto, más contenido.",
+    "texto": "Nace la app de LOBO BLANCO, un medio digital deportivo independiente.\nEn ella encontrarás fútbol, análisis, actualidad y opinión. Pronto habrá más contenido.",
+    "fecha": "22/11/2026",
+    "fuente": "Redacción LOBO BLANCO",
+    "fija": true
+  },
+  {
+    "tipo": "opinion",
+    "seccion": "Multimedia",
+    "titulo": "El Vini prime aconseja al Vini actual",
+    "resumen": "Nuevo vídeo en el TikTok de LOBO BLANCO: el Vini prime aconseja al Vini actual.",
+    "enlace": "https://vm.tiktok.com/ZGdX31VsL/",
+    "fecha": "18/11/2026",
+    "fuente": "TikTok @lobo1610",
+    "fija": true
   }
 ]
