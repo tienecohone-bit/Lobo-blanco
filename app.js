@@ -50,6 +50,34 @@ function crear(tag, clase, texto) {
   return el;
 }
 
+// Estilo del boton Compartir (va aqui para no tocar index.html)
+(function () {
+  var estilo = document.createElement('style');
+  estilo.textContent =
+    '.compartir{margin-top:10px;padding:6px 14px;font-size:.85rem;' +
+    'background:transparent;color:inherit;cursor:pointer;' +
+    'border:1px solid rgba(128,128,128,.55);border-radius:999px;}';
+  document.head.appendChild(estilo);
+})();
+
+function compartirNoticia(n) {
+  var url = (n.enlace && String(n.enlace).indexOf('https://') === 0)
+    ? n.enlace
+    : 'https://tienecohone-bit.github.io/lobo-blanco/';
+  var datos = {
+    title: n.titulo || 'LOBO BLANCO',
+    text: (n.titulo || '') + ' - LOBO BLANCO',
+    url: url
+  };
+  if (navigator.share) {
+    navigator.share(datos).catch(function () {});
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(datos.text + ' ' + url)
+      .then(function () { alert('Enlace copiado'); })
+      .catch(function () {});
+  }
+}
+
 function crearTarjeta(n) {
   var t = crear('article', 'tarjeta');
   if (n.imagen) {
@@ -91,6 +119,14 @@ function crearTarjeta(n) {
     a.addEventListener('click', function (e) { e.stopPropagation(); });
     c.appendChild(a);
   }
+
+  var comp = crear('button', 'compartir', 'Compartir ↗');
+  comp.type = 'button';
+  comp.addEventListener('click', function (e) {
+    e.stopPropagation();
+    compartirNoticia(n);
+  });
+  c.appendChild(comp);
 
   var meta = [];
   if (n.fecha) meta.push(n.fecha);
