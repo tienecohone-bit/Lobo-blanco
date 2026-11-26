@@ -20,6 +20,16 @@
     "fija": true
   },
   {
+    "tipo": "confirmada",
+    "seccion": "Multimedia",
+    "titulo": "Nuevo vídeo en el TikTok de LOBO BLANCO",
+    "resumen": "Nuevo vídeo publicado en el TikTok de LOBO BLANCO. Pulsa el botón para verlo.",
+    "enlace": "https://vm.tiktok.com/ZGdXE9vpN/",
+    "fecha": "25/11/2026",
+    "fuente": "TikTok @lobo1610",
+    "fija": true
+  },
+  {
     "tipo": "opinion",
     "seccion": "Real Madrid",
     "titulo": "Ganar no es convencer: el Madrid vive al límite",
